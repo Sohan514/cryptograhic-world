@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption Name Analyzer</title>
+    <link rel="stylesheet" href="/CSS/Techniques.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Name Encryption Analyzer</h1>
+        
+        <div class="cipher-card">
+            <h2>Caesar Cipher</h2>
+            <div>
+                <label for="inputText1">Enter Text:</label><br>
+                <textarea id="inputText1" rows="4" cols="50"></textarea>
+            </div>
+            
+            <div>
+                <label for="shift">Enter Shift Value:</label><br>
+                <input type="number" id="shift" value="3">
+            </div>
+            
+            <div>
+                <button onclick="caesarCipher()">Encrypt</button>
+            </div>
+            
+            <div>
+                <h3>Encrypted Text:</h3>
+                <p id="caesarresult"></p>
+            </div>
+        </div>
+
+        <div class="cipher-card">
+            <h2>Vigenère Cipher</h2>
+            <div>
+                <label for="plaintext">Enter Text:</label>
+                <input type="text" id="plaintext">
+            </div>
+            
+            <div>
+                <label for="key">Enter Key:</label>
+                <input type="text" id="key">
+            </div>
+            
+            <div>
+                <button onclick="vigenere()">Encrypt</button>
+            </div>
+            
+            <div>
+                <h3>Encrypted Text:</h3>
+                <p id="vignereresult"></p>
+            </div>
+        </div>
+
+        <div class="cipher-card">
+            <h2>Rail Fence Cipher</h2>
+            <div>
+                <label for="inputText">Enter Text:</label><br>
+                <textarea id="inputText" rows="4" cols="50"></textarea>
+            </div>
+            
+            <div>
+                <label for="depth">Enter Depth (number of rails):</label><br>
+                <input type="number" id="depth" min="2" value="3">
+            </div>
+            
+            <div>
+                <button onclick="railFenceCipher()">Encrypt Text</button>
+            </div>
+            
+            <div>
+                <h3>Encrypted Text:</h3>
+                <p id="cipherresult"></p>
+            </div>
+        </div>
+
+        <div class="cipher-card">
+            <h2>RSA Algorithm</h2>
+            <div>
+                <label>Enter Name:</label>
+                <input type="text" id="rsa-input">
+            </div>
+            <br>
+            <div>
+                <label>Enter prime number p:</label>
+                <input type="number" id="p">
+            </div>
+            <br>
+            <div>
+                <label>Enter prime number q:</label>
+                <input type="number" id="q">
+            </div>
+            <br>
+            <div>
+                <label>Enter public key e:</label>
+                <input type="number" id="e">
+            </div>
+            <br>
+            <button onclick="rsaEncrypt()">Encrypt Text</button>
+            <br><br>
+            <div>
+                <label>Encrypted Text: </label>
+                <span id="rsaresult"></span>
+            </div>
+        </div>
+
+        <button onclick="generateReport()">Check Report</button>
+
+        <table id="comparison-table">
+            <thead>
+                <tr>
+                    <th>Technique</th>
+                    <th>Original Text</th>
+                    <th>Encrypted Text</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+
+        <div id="security-message" class="message"></div>
+    </div>
+
+    <script src="/JS/techniques.js"></script>
+</body>
+</html>

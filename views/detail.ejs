@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cryptographic Techniques - Details 📚</title>
+    <link rel="stylesheet" href="/CSS/detail.css">
+</head>
+<body>
+    <h1 class="main-title">Cryptographic Techniques Details 📚</h1>
+
+    <div class="technique">
+        <h3 class="technique-title">🔄 Caesar Cipher</h3>
+        <p>A simple substitution cipher that shifts letters by a fixed number of positions.</p>
+        <div class="example">
+            Original word: HELLO<br>
+            Numerical values: H(7) E(4) L(11) L(11) O(14)<br>
+            Key = 3<br>
+            After adding key: 10 7 14 14 17<br>
+            After mod 26: 10 7 14 14 17<br>
+            Encrypted text: KHOOR
+        </div>
+    </div>
+
+    <div class="technique">
+        <h3 class="technique-title">🔑 Vigenère Cipher</h3>
+        <p>A polyalphabetic substitution cipher using a keyword to shift letters.</p>
+        <div class="example">
+            Word: HELLO<br>
+            Key: KEY<br>
+            Word numbers: H(7) E(4) L(11) L(11) O(14)<br>
+            Key numbers: K(10) E(4) Y(24) K(10) E(4)<br>
+            Sum: 17 8 35 21 18<br>
+            After mod 26: 17 8 9 21 18<br>
+            Encrypted text: RIJVS
+        </div>
+    </div>
+
+    <div class="technique">
+        <h3 class="technique-title">🚂 Rail Fence Cipher</h3>
+        <p>A transposition cipher that writes text in a zigzag pattern on multiple rails.</p>
+        <div class="example">
+            Word: HELLO<br>
+            Rail depth: 3<br>
+            <table>
+                <tr><td>H</td><td>&nbsp;</td><td>&nbsp;</td><td>O</td><td>&nbsp;</td></tr>
+                <tr><td>&nbsp;</td><td>E</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                <tr><td>&nbsp;</td><td>&nbsp;</td><td>L</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            </table>
+            Reading by rows: H + O + E + L = HOLE
+        </div>
+    </div>
+
+    <div class="technique">
+        <h3 class="technique-title">🔒 RSA Algorithm</h3>
+        <p>An asymmetric cryptographic algorithm based on the factorization of large numbers.</p>
+        <div class="example">
+            p = 3, q = 11, e = 7, n = 33<br>
+            Word: HI<br>
+            H(7): C = 7^7 mod 33 = 7<br>
+            I(8): C = 8^7 mod 33 = 8<br>
+            Encrypted text: 7,8
+        </div>
+    </div>
+
+    <a href="http://localhost:3000/mainpage" class="back-link">🏠 Back to Home</a>
+
+    <script src="/JS/detail.js"></script>
+</body>
+</html>

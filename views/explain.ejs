@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cryptography</title>
+    <link rel="stylesheet" href="/CSS/explain.css" />
+  </head>
+  <body>
+    <h1 class="main-title">What is Crypto? 🔐</h1>
+
+    <div class="main-arrow">⬇️</div>
+
+    <div class="split-container">
+      <div class="split-words">
+        <span>CRYPTO</span>
+        <span>+</span>
+        <span>GRAPHY</span>
+      </div>
+    </div>
+
+    <div class="word-explanation">
+      <div class="explanation-box">
+        <h3>🔒 CRYPTO</h3>
+        <p>"Hidden/Secret" from Greek 'Kryptos'</p>
+      </div>
+      <div class="slant-arrow">↙️</div>
+      <div style="flex-grow: 1"></div>
+      <div class="slant-arrow reverse">↘️</div>
+      <div class="explanation-box">
+        <h3>✍️ GRAPHY</h3>
+        <p>"Writing" from Greek 'Graphein'</p>
+      </div>
+    </div>
+
+    <div class="game-container">
+      <input
+        type="text"
+        class="text-box"
+        id="inputText"
+        placeholder="Enter your message..."
+      />
+      <div class="arrow">➡️</div>
+
+      <div class="image-container">
+        <div class="crypto-img" onclick="flipCard(this, 1)">
+          <div class="crypto-img-front">
+            <img
+              src="/images/crypto1.jpg"
+              alt="Cryptographer 1"
+              class="crypto-img-style"
+            />
+          </div>
+          <div class="crypto-img-back">WHO?</div>
+        </div>
+      </div>
+
+      <div class="arrow">➡️</div>
+      <div class="text-box" id="output1"></div>
+      <div class="arrow">➡️</div>
+
+      <div class="image-container">
+        <div class="crypto-img" onclick="flipCard(this, 2)">
+          <div class="crypto-img-front">
+            <img
+              src="/images/crypto2.png"
+              alt="Cryptographer 2"
+              class="crypto-img-style"
+            />
+          </div>
+          <div class="crypto-img-back">WHO?</div>
+        </div>
+      </div>
+
+      <div class="arrow">➡️</div>
+      <div class="text-box" id="output2"></div>
+    </div>
+
+    <h2 class="section-title" id="contributors">
+        Contributors of Cryptography
+    </h2>
+    <table class="contributors-table">
+      <tr>
+        <th>Photo</th>
+        <th>Name</th>
+        <th>Contribution</th>
+      </tr>
+      <% contributors.forEach(contributor => { %>
+        <tr>
+          <td>
+            <img src="<%= contributor.image %>" alt="<%= contributor.name %>" />
+          </td>
+          <td><%= contributor.name %></td>
+          <td><%= contributor.contribution %></td>
+        </tr>
+      <% }) %>
+    </table>
+
+    <h1 class="title">Features of Cryptography</h1>
+    <div class="features">
+        <div class="feature">
+            <span class="icon">🔒</span>
+            <span>Ensures complete privacy and security of sensitive information</span>
+        </div>
+        <div class="feature">
+            <span class="icon">✅</span>
+            <span>Guarantees data integrity and authenticity</span>
+        </div>
+        <div class="feature">
+            <span class="icon">🔐</span>
+            <span>Provides secure key exchange and management</span>
+        </div>
+        <div class="feature">
+            <span class="icon">🛡️</span>
+            <span>Protects against unauthorized access and tampering</span>
+        </div>
+    </div>
+
+    <script src="/JS/explain.js"></script>
+  </body>
+</html>

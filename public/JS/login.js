@@ -29,15 +29,13 @@ function validateSignup() {
 
     if (password !== confirmPassword) {
         document.getElementById("confirm-password-error").style.display = "block";
-        return false;  // Prevent form submission
+        isValid = false;
     } else {
         document.getElementById("confirm-password-error").style.display = "none";
     }
 
-    return isValid;  // Form submits only if true
+    return isValid; // Form submits only if true
 }
-
-
 
 function validateLogin(event) {
     let email = document.getElementById("login-email").value.trim();
@@ -51,3 +49,19 @@ function validateLogin(event) {
     }
     return true;
 }
+
+document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', () => {
+        // Check if the corresponding error element exists before hiding it
+        let errorElement = document.getElementById(input.id + "-error");
+        if (errorElement) {
+            errorElement.style.display = "none";
+        }
+
+        // Hide the server-side error message if it exists
+        let serverError = document.getElementById("server-error");
+        if (serverError) {
+            serverError.style.display = "none";
+        }
+    });
+});

@@ -44,20 +44,20 @@ app.post("/login", async (req, res) => {
 });
 
 app.get('/signup', (req, res) => {
-    res.render('signup.ejs');
+    res.render('signup.ejs', { error: null });
   });
 
 app.post("/signup", async (req, res) => {
     const { name, email, password, confirmPassword } = req.body;
 
     if (password !== confirmPassword) {
-        return res.send("<h2>Passwords do not match! Try again.</h2>");
+        return res.render('signup.ejs', { error: 'Passwords do not match' });
     }
 
     try {
         const existingUser = await Signup.findOne({ email });
         if (existingUser) {
-            return res.send("<h2>Email already exists! Please login.</h2>");
+            return res.render('signup.ejs', { error: 'Email already exists' });
         }
 
         // Remove confirmPassword before saving, as it's not part of the schema

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptographic World</title>
-    <link rel="stylesheet" href="/login.css">
+    <link rel="stylesheet" href="/CSS/login.css">
 </head>
 <body>
     <div class="container">
@@ -31,14 +31,17 @@
                     <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirm password" required>
                     <p id="confirm-password-error" class="error-message">Passwords do not match!</p>
                 </div>
-                <p id="signup-success" class="error-message" style="color: green;">Account created successfully!</p>
-                <button type="submit" class="signup-btn" onclick="return validateSignup()">Create Account</button>
+                <% if (error) { %>
+                    <p id="server-error" style="color: red;"><%= error %></p>
+                <% } %>
+                <p id="signup-success" class="error-message" style="color: green; display: none;">Account created successfully!</p>
+                <button type="submit" class="signup-btn">Create Account</button>
             </form>
         </div>
         <div class="welcome-box">
             <h2>WELCOME</h2>
         </div>
     </div>
-    <script src="/login.js"></script>
+    <script src="/JS/login.js"></script>
 </body>
 </html>

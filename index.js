@@ -115,6 +115,10 @@ app.get("/techniques", (req, res) => {
     res.render("techniques.ejs");
 });
 
+app.get("/games", (req, res) => {
+    res.render("games.ejs");
+});
+
 app.listen(port, () => {
   console.log(`App listening on port ${port}`)
 })

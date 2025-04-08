@@ -122,3 +122,11 @@ app.get("/games", (req, res) => {
 app.listen(port, () => {
   console.log(`App listening on port ${port}`)
 })
+
+app.get("/discover", (req, res) => {
+    res.render("discover.ejs");
+});
+
+app.get("/quiz", (req, res) => {
+    res.render("quiz.ejs");
+});

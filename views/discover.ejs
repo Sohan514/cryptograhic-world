@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cryptographic Techniques</title>
+    <link rel="stylesheet" href="/CSS/discover.css" />
+  </head>
+  <body>
+    <h1>Cryptographic Techniques Details 🔐</h1>
+
+    <div class="cipher">
+      <h2><span class="emoji">🔒</span> MD-5 (Message Digest Algorithm 5)</h2>
+      <p>A widely used cryptographic hash function that produces a 128-bit hash value.</p>
+
+      <div class="example">
+        <p><span class="highlight">Input:</span> "Hello World"</p>
+        <p class="terminal-line">Numerical values: (converted to ASCII bytes)</p>
+        <p class="terminal-line">Padding to 512 bits</p>
+        <p class="terminal-line">Initialize buffers (A,B,C,D)</p>
+        <p class="terminal-line">Process in 512-bit chunks</p>
+        <p><span class="highlight">MD-5 Hash:</span> b10a8db164e0754105b7a99be72e3fe5</p>
+      </div>
+    </div>
+
+    <div class="cipher">
+      <h2><span class="emoji">🛡️</span> SHA (Secure Hash Algorithm)</h2>
+      <p>A family of cryptographic hash functions published by NIST.</p>
+
+      <div class="example">
+        <p><span class="highlight">Input:</span> "Hello World"</p>
+        <p class="terminal-line">Numerical values: (converted to binary)</p>
+        <p class="terminal-line">Padding to 512 bits</p>
+        <p class="terminal-line">Initialize hash values (h0-h7)</p>
+        <p class="terminal-line">Process message in 512-bit chunks</p>
+        <p><span class="highlight">SHA-256 Hash:</span> a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e</p>
+      </div>
+    </div>
+
+    <div class="cipher">
+      <h2><span class="emoji">🔁</span> Diffie-Hellman Key Exchange</h2>
+      <p>A method of securely exchanging cryptographic keys over a public channel.</p>
+
+      <div class="example">
+        <p><span class="highlight">Public Parameters:</span><br />Prime (p) = 23<br />Base (g) = 5</p>
+
+        <p><span class="highlight">Alice:</span> 👩‍💻 <br />Private key (a) = 6<br />Sends A = g<sup>a</sup> mod p = 8</p>
+
+        <p><span class="highlight">Bob:</span> 👨‍💻 <br />Private key (b) = 15<br />Sends B = g<sup>b</sup> mod p = 19</p>
+
+        <p><span class="highlight">Shared Secret:</span> 2</p>
+      </div>
+    </div>
+
+    <div class="cipher">
+      <h2><span class="emoji">✍️</span> Digital Signatures</h2>
+      <p>A mathematical scheme for verifying the authenticity of digital messages.</p>
+
+      <div class="example">
+        <p><span class="highlight">RSA Signature Example:</span></p>
+        <p class="terminal-line">p = 61, q = 53</p>
+        <p class="terminal-line">n = p*q = 3233</p>
+        <p class="terminal-line">φ(n) = (p-1)(q-1) = 3120</p>
+        <p class="terminal-line">e = 17 (public)</p>
+        <p class="terminal-line">d = 2753 (private)</p>
+        <p><span class="highlight">Signature:</span> 2790</p>
+        <p><span class="highlight">Verification:</span> 65 (matches original)</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      🔐 Secure Communications • Cryptography Fundamentals • Data Protection 🔐
+    </div>
+  </body>
+</html>

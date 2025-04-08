@@ -1,0 +1,121 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    height: 100vh;
+    background: url('/images/background-image.avif') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+
+.quiz-container {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 80vw;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-container:first-child {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+p {
+    font-style: normal;
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+h1 {
+    font-style: italic;
+    margin-bottom: 50px;
+    font-size: 3rem;
+}
+
+.options {
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+}
+
+.options label {
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+    display: flex;
+}
+
+.options label:hover {
+    transform: scale(1.1);
+}
+
+.options img {
+    height: 120px;
+    object-fit: calc();
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: border-color 0.3s;
+    border-radius: 15px;
+    width: 120px;
+}
+
+.options input[type="radio"] {
+    display: none;
+}
+
+.options input[type="radio"]:checked + img {
+    border-color: #11a0cc;
+}
+
+.buttons {
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    display: flex;
+}   
+
+button {
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #6200ea;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    padding: 12px 24px;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+.result {
+    font-size: 18px;
+    font-weight: bold;
+    color: #bb86fc;
+    margin-top: 20px;
+}

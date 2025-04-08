@@ -53,12 +53,58 @@ section {
     transform: scale(1.1);
 }
 
+.technique {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+}
+
+.technique-title {
+    color: #00ff00;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.example {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: monospace;
+}
+
+.step {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+td {
+    border: 1px solid #00ff00;
+    padding: 8px;
+    text-align: center;
+}
+
 .content-section {
     margin: 40px 0;
     padding: 20px;
     background-color: #1a1a1a;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+}
+
+.section-title {
+    color: #00ff00;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .options-container {
@@ -82,4 +128,98 @@ section {
 .clickable-option:hover {
     text-shadow: 0 0 10px #00ff00;
     transform: scale(1.1);
+}
+
+.game-link {
+    display: inline-block;
+    background-color: #2a2a2a;
+    color: #00ff00;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid #00ff00;
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.game-link:hover {
+    background-color: #00ff00;
+    color: #0a0a0a;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    transform: translateY(-3px);
+}
+
+.game-description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.games-preview {
+    margin-top: 30px;
+}
+
+.game-item {
+    background-color: #2a2a2a;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 3px solid #00ff00;
+    transition: all 0.3s ease;
+}
+
+.game-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.game-item h3 {
+    color: #00ff00;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.game-item p {
+    margin: 0;
+    color: #dddddd;
+}
+
+.featured-game {
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00ff00;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-game::before {
+    content: "FEATURED";
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    background-color: #00ff00;
+    color: #0a0a0a;
+    padding: 5px 30px;
+    font-size: 0.7em;
+    font-weight: bold;
+    transform: rotate(45deg);
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+    }
 }

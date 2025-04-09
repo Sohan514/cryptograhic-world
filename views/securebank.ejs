@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SecureBank Challenge</title>
+  <link rel="stylesheet" href="/CSS/securebank.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+          <h1>SecureBank Penetration Test</h1>
+          <p>
+            Prove your hacking skills by solving these cryptography challenges
+          </p>
+        </header>
+  
+        <div class="progress-bar">
+          <div class="progress" id="progressBar"></div>
+        </div>
+        <div class="challenge-number" id="challengeNumber">Challenge: 1/3</div>
+  
+        <!-- Challenge 1: Caesar Cipher -->
+        <div class="challenge active" id="challenge1">
+          <h2>Challenge 1: Decrypt the Message</h2>
+          <div class="terminal">
+            <p>Access code encrypted with a simple shift cipher:</p>
+            <p id="encryptedMessage">Hvtlivkp eldv: xlii_kvjkvw_svxfivw</p>
+          </div>
+          <p>Enter the decrypted message to proceed:</p>
+          <input
+            type="text"
+            id="challenge1Input"
+            placeholder="Enter your answer"
+          />
+          <button id="challenge1Submit">Submit</button>
+          <p class="hint">
+            Hint: Each letter might be shifted by the same number of positions in
+            the alphabet.
+          </p>
+          <p id="challenge1Result"></p>
+        </div>
+  
+        <!-- Challenge 2: Binary to ASCII -->
+        <div class="challenge" id="challenge2">
+          <h2>Challenge 2: Binary Decoding</h2>
+          <div class="terminal">
+            <p>Found the following binary code in the system logs:</p>
+            <p id="binaryCode">
+              01110000 01100001 01110011 01110011 01110111 01101111 01110010
+              01100100 00111010 00100000 01100010 01101001 01101110 01100001
+              01110010 01111001 01011111 01101101 01100001 01110011 01110100
+              01100101 01110010
+            </p>
+          </div>
+          <p>What does this code reveal? Enter the complete decoded message:</p>
+          <input
+            type="text"
+            id="challenge2Input"
+            placeholder="Enter your answer"
+          />
+          <button id="challenge2Submit">Submit</button>
+          <p class="hint">
+            Hint: Each 8-bit group represents a single ASCII character.
+          </p>
+          <p id="challenge2Result"></p>
+        </div>
+  
+        <!-- Challenge 3: MD5 Hash -->
+        <div class="challenge" id="challenge3">
+          <h2>Challenge 3: Hash Cracking</h2>
+          <div class="terminal">
+            <p>Security system locked with a hashed password.</p>
+            <p>MD5 Hash: e10adc3949ba59abbe56e057f20f883e</p>
+            <p>Hint: It's a common 6-digit number.</p>
+          </div>
+          <p>Enter the original password to bypass the system:</p>
+          <input
+            type="text"
+            id="challenge3Input"
+            placeholder="Enter the cracked password"
+          />
+          <button id="challenge3Submit">Submit</button>
+          <p class="hint">
+            Hint: Try common patterns or sequences people might use for a 6-digit
+            number.
+          </p>
+          <p id="challenge3Result"></p>
+        </div>
+  
+        <!-- Locker Room (The Trap) -->
+        <div class="locker-room" id="lockerRoom">
+          <h2>BANK VAULT ACCESS</h2>
+          <div class="vault-door">
+            <div class="vault-text">$$$</div>
+          </div>
+          <p>Scanning system files...</p>
+          <div class="terminal">
+            <p>STATUS: <span class="success-message">ACCESS GRANTED</span></p>
+            <p>VAULT SECURITY: <span class="error-message">BYPASSED</span></p>
+            <p>
+              FUNDS: <span class="success-message">$24,752,109.87 AVAILABLE</span>
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Congratulations Screen (The Trap) -->
+      <div class="congratulations" id="congratsScreen" style="display: none">
+        <h2>CONGRATULATIONS!</h2>
+        <p>You've successfully penetrated SecureBank's security system.</p>
+        <p>You are just ONE STEP AWAY from accessing $24,752,109.87</p>
+        <br />
+        <p>
+          For security verification and to complete the transfer, we need to
+          confirm your identity:
+        </p>
+  
+        <div class="trap-form">
+          <input
+            type="text"
+            id="realName"
+            placeholder="Enter your full legal name"
+            required
+          />
+          <input type="file" id="selfieUpload" accept="image/*" required />
+          <p class="hint">
+            A selfie is required to bypass the final biometric check
+          </p>
+          <button id="completeHeist">Complete Heist & Transfer Funds</button>
+        </div>
+      </div>
+  
+      <!-- Trap Message -->
+      <div class="trap-message" id="trapMessage" style="display: none">
+        <div class="police-logo">CYBER CELL</div>
+        <h2 class="blink">YOU HAVE BEEN TRACKED!</h2>
+  
+        <!-- Wanted Poster Section -->
+        <div class="wanted-poster">
+          <img id="wantedImage" src="" alt="Captured Image" />
+          <div class="wanted-text">WANTED !!!</div>
+        </div>
+  
+        <p id="capturedInfo"></p>
+        <p>Your attempt to hack into a banking system has been recorded.</p>
+        <p>
+          Your IP address, location, and personal information have been shared
+          with the Cyber Crime Cell.
+        </p>
+        <p>This was a honeypot designed to catch malicious actors.</p>
+        <h3>
+          Legal action may be taken against you under relevant cyber crime laws.
+        </h3>
+      </div>
+  <script src="/JS/securebank.js"></script>
+</body>
+</html>

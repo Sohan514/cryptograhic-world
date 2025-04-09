@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrossWord</title>
+  <link rel="stylesheet" href="/CSS/crossword.css">
+</head>
+<body>
+  <!-- Welcome Page -->
+  <div id="welcome-page" class="welcome-page">
+    <div class="welcome-container">
+      <h1 class="welcome-title typing-animation">CYBER CROSSWORD</h1>
+      <p>Enter your hacker alias to begin the challenge:</p>
+      <input type="text" id="player-name" class="welcome-input" placeholder="Enter your name" required>
+      <button id="start-game" class="start-btn">INITIATE CHALLENGE</button>
+    </div>
+  </div>
+
+  <!-- Game Page -->
+  <div id="game-page" class="game-page">
+    <div class="container">
+      <div class="game-header">
+        <h1 class="glitch-effect">Cybersecurity Crossword</h1>
+        <div id="username-display"></div>
+      </div>
+      <div id="timer" class="timer">00:00</div>
+      <div id="score-display" class="score-display">Score: 0/6</div>
+
+      <div class="content-wrapper">
+        <div class="left-panel">
+          <div class="question-list" id="question-list">
+            <div class="question">
+              <h3>Across</h3>
+              <div id="across-questions"></div>
+            </div>
+            <div class="question">
+              <h3>Down</h3>
+              <div id="down-questions"></div>
+            </div>
+          </div>
+          <div class="buttons">
+            <button id="check-btn">Check Answers</button>
+            <button id="reveal-btn">Reveal Answers</button>
+            <button id="reset-btn">Reset</button>
+          </div>
+        </div>
+
+        <div class="grid-container">
+          <div class="crossword-grid" id="crossword-grid"></div>
+        </div>
+      </div>
+
+      <div class="leaderboard">
+        <h2>Leaderboard</h2>
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Alias</th>
+              <th>Score</th>
+              <th>Time</th>
+              <th>Score×Time</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body">
+            <!-- Leaderboard entries will be added here -->
+          </tbody>
+        </table>
+        <div class="leaderboard-actions">
+          <button id="clear-leaderboard-btn" class="danger-btn">Clear Leaderboard</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/JS/crossword.js"></script>
+</body>
+</html>

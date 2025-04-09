@@ -130,3 +130,11 @@ app.get("/discover", (req, res) => {
 app.get("/quiz", (req, res) => {
     res.render("quiz.ejs");
 });
+
+app.get("/crossword", (req, res) => {
+    res.render("crossword.ejs");
+});
+
+app.get("/securebank", (req, res) => {
+    res.render("securebank.ejs");
+});

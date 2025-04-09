@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: #33ff33;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #33ff33;
+  }
+
+  header {
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 1px solid #33ff33;
+    padding-bottom: 10px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 15px;
+  }
+
+  .challenge {
+    margin-bottom: 30px;
+    display: none;
+  }
+
+  .challenge.active {
+    display: block;
+  }
+
+  .terminal {
+    background-color: #121212;
+    border: 1px solid #33ff33;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(51, 255, 51, 0.3);
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="file"] {
+    background-color: #121212;
+    border: 1px solid #33ff33;
+    color: #33ff33;
+    padding: 8px 12px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    background-color: #121212;
+    color: #33ff33;
+    border: 1px solid #33ff33;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  button:hover {
+    background-color: #33ff33;
+    color: #121212;
+  }
+
+  .hint {
+    font-style: italic;
+    margin-top: 15px;
+    color: #bbb;
+  }
+
+  .success-message {
+    color: #33ff33;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  .error-message {
+    color: #ff3333;
+    margin: 10px 0;
+  }
+
+  .loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(51, 255, 51, 0.3);
+    border-radius: 50%;
+    border-top-color: #33ff33;
+    animation: spin 1s ease-in-out infinite;
+    margin-left: 10px;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .locker-room {
+    display: none;
+    text-align: center;
+  }
+
+  .vault-door {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    height: 300px;
+    background-color: #333;
+    border: 10px solid #222;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .vault-text {
+    font-size: 48px;
+    color: gold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+
+  .congratulations {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: gold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .congratulations h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+
+  .trap-form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .trap-form input {
+    margin: 10px 0;
+    padding: 12px;
+  }
+
+  .trap-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff0000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .police-logo {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+  }
+
+  .blink {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .progress-bar {
+    height: 20px;
+    background-color: #121212;
+    border: 1px solid #33ff33;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .progress {
+    height: 100%;
+    background-color: #33ff33;
+    width: 0%;
+    transition: width 0.5s;
+  }
+
+  .challenge-number {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  /* New styles for wanted poster */
+  .wanted-poster {
+    margin: 20px 0;
+    border: 5px solid black;
+    background-color: #fff;
+    padding: 10px;
+    max-width: 300px;
+  }
+
+  .wanted-poster img {
+    width: 100%;
+    border: 2px solid #000;
+  }
+
+  .wanted-text {
+    font-family: "Times New Roman", serif;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
